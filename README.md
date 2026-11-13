@@ -1,4 +1,4 @@
-# Gmail Organizer
+# Gmail Organizer - Em Desenvolvimento
 
 Sistema para organizar e-mails pessoais, profissionais e acadêmicos usando Python, Gmail API, PostgreSQL e Streamlit.
 
@@ -8,9 +8,9 @@ Este projeto conecta múltiplas contas do Gmail, classifica mensagens por catego
 
 ## Contas suportadas
 
-- Pessoal: `marcusadrianomeleiro@gmail.com`
-- Profissional: `meleiro.dev@gmail.com`
-- Faculdade: `marcus.adriano@sga.pucminas.br`
+- Pessoal: `user@gmail.com`
+- Profissional: `user.dev@gmail.com`
+- Faculdade: `user@sga.pucminas.br`
 
 ## Categorias
 
@@ -79,17 +79,17 @@ python3 -c "from app.db import Base, engine; Base.metadata.create_all(bind=engin
 Crie o arquivo `credentials.json` no diretório da raiz do projeto, depois rode:
 
 ```bash
-python3 scripts/authorize_gmail.py --email marcusadrianomeleiro@gmail.com
-python3 scripts/authorize_gmail.py --email meleiro.dev@gmail.com
-python3 scripts/authorize_gmail.py --email marcus.adriano@sga.pucminas.br
+python3 scripts/authorize_gmail.py --email 
+python3 scripts/authorize_gmail.py --email 
+python3 scripts/authorize_gmail.py --email 
 ```
 
 ## Sincronização de e-mails
 
 ```bash
-python3 scripts/sync_gmail.py --account-name "Pessoal" --email "marcusadrianomeleiro@gmail.com" --account-type pessoal --max-results 20
-python3 scripts/sync_gmail.py --account-name "Profissional" --email "meleiro.dev@gmail.com" --account-type profissional --max-results 20
-python3 scripts/sync_gmail.py --account-name "Faculdade" --email "marcus.adriano@sga.pucminas.br" --account-type faculdade --max-results 20
+python3 scripts/sync_gmail.py --account-name "Pessoal" --email "user@gmail.com" --account-type pessoal --max-results 20
+python3 scripts/sync_gmail.py --account-name "Profissional" --email "user@gmail.com" --account-type profissional --max-results 20
+python3 scripts/sync_gmail.py --account-name "Faculdade" --email "user@sga.pucminas.br" --account-type faculdade --max-results 20
 ```
 
 ## Dashboard
